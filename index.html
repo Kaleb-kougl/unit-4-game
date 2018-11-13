@@ -8,7 +8,6 @@
   <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/reset.css" />
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" media="screen" href="./assets/css/style.css" />
-  <script src="main.js"></script>
 </head>
 <body>
   <div class="flex-container">
@@ -16,45 +15,56 @@
       <div class="col-6">Star Wars RPG!</div>
     </div>
     <div class="row">
-      <div class="col-2" id="char-1">pickme1</div>
-      <div class="col-2" id="char-2">pickme2</div>
-      <div class="col-2" id="char-3">pickme3</div>
-      <div class="col-2" id="char-4">pickme4</div>
+      <div class="col-2 char char-border" id="char-1" data-hp="120" data-ap="6" data-cap="25" data-name="amethyst">
+        <img src='./assets/images/amethyst.png' height="130" width="75">
+        <p>HP:</p>
+      </div>
+      <div class="col-2 char char-border" id="char-2" data-hp="100" data-ap="8" data-cap="5" data-name="Jasper">
+          <img src='./assets/images/Jasper.jpg' height="130" width="75">
+          <p>HP:</p>
+      </div>
+      <div class="col-2 char char-border" id="char-3" data-hp="150" data-ap="7" data-cap="48" data-name="lapis">
+          <img src='./assets/images/lapis.png' height="130" width="75">
+          <p>HP:</p>
+      </div>
+      <div class="col-2 char char-border" id="char-4" data-hp="100" data-ap="5" data-cap="12" data-name="peridot">
+          <img src='./assets/images/peridot.jpg' height="130" width="75">
+          <p>HP:</p>
+      </div>
     </div>
     <div class="row">
       <div class="col-4">Your Character</div>
     </div>
-    <div class="row">
-      <div class="col-2">charrrrr</div>
+    <div class="row" id="your-character-row">
+      <!-- <div class="col-2" id="your-character-col"></div> -->
     </div>
     <div class="row">
       <div class="col-4">
         Enemies Available To Attack
       </div>
     </div>
-    <div class="row">
-      <div class="col-2">enemy</div>
-      <div class="col-2">enemy</div>
-      <div class="col-2">enemy</div>
+    <div class="row" id='enemy-row'>
     </div>
-    <div class="row">
-      <div class="col-4">Fight Section</div>
+    <div class="row" id="fight-row">
+      <div class="col-4" id="fight-col">Fight Section</div>
     </div>
     <div class="row">
       <div class="col-2">
-        <button>Attack</button>
+        <button class="btn btn-primary" id="attack">Attack</button>
       </div>
     </div>
     <div class="row">
       <div class="col-2">Defender</div>
     </div>
-    <div class="row">
-      <div class="col-2">enemy</div>
+    <div class="row" id="defender">
+    </div>
+    <div class="row" id="attack-output">
     </div>
   </div>
     
     <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="./assets/javascript/game.js"></script>
   </body>
   </html>

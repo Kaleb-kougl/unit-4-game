@@ -1,0 +1,21 @@
+img {
+  width: inherit;
+  max-height: 120;
+  margin: 5px;
+}
+
+.char {
+  background-color: white;
+}
+
+.character {
+  border: 1px solid green;
+}
+
+.enemy-available {
+  background-color: red;
+}
+
+.current-enemy {
+  background-color: gray;
+}
