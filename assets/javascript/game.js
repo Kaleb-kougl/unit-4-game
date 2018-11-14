@@ -77,6 +77,7 @@ function handleAttackBtnClick() {
     $('#attack-output').html(`<div class="col-4">You've been defeated... GAME OVER!!!</div><div class="col-8"></div>
       <div class="col-4"><button id="restart">Restart</button></div>`);
     $(document).off('click', '#attack', handleAttackBtnClick);
+    $(`#${charName}`).text(0);
   } else if (enemyhp <= 0) {
     enemySet = false;
     $('.current-enemy').detach();
