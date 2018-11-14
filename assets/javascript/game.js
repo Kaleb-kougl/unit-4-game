@@ -25,6 +25,7 @@ $(document).ready(function() {
 
   $(document).on('click', '#attack', handleAttackBtnClick);
 
+
 });
 
 
@@ -67,6 +68,6 @@ function handleAttackBtnClick() {
     enemySet = false;
     $('.current-enemy').detach();
   } else if (charhp <= 0) {
-    console.log('you suck');
+    $('#attack-output').html(`<div class="col-12">You've been defeated... GAME OVER!!!</div><div class="col-12"><button id="restart">Restart</button></div>`);
   }
 }
