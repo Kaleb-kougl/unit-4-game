@@ -1,3 +1,7 @@
+body {
+  text-align: center;
+}
+
 img {
   width: inherit;
   max-height: 120;

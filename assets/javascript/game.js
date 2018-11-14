@@ -25,6 +25,7 @@ $(document).ready(function() {
 
   $(document).on('click', '#attack', handleAttackBtnClick);
 
+  $(document).on('click', '#restart', handleRestartClick);
 
 });
 
@@ -61,13 +62,17 @@ function handleAttackBtnClick() {
   if (enemySet && enemyhp >= 0 && charhp >= 0) {
     charhp -= enemyAttack;
     enemyhp -= currentAttack;
-    $('#attack-output').html(`<div class="col-12">You attacked ${enemyName} for 
+    $('#attack-output').html(`<div class="col-4">You attacked ${enemyName} for 
     ${currentAttack} damage.<br>${enemyName} attacked you back for ${enemyAttack} damage.</div>`);
     currentAttack += baseCharAttack;
   } else if (enemyhp <= 0) {
     enemySet = false;
     $('.current-enemy').detach();
   } else if (charhp <= 0) {
-    $('#attack-output').html(`<div class="col-12">You've been defeated... GAME OVER!!!</div><div class="col-12"><button id="restart">Restart</button></div>`);
+    $('#attack-output').html(`<div class="col-4">You've been defeated... GAME OVER!!!</div><div class="col-8"></div><div class="col-4"><button id="restart">Restart</button></div>`);
   }
+}
+
+function handleRestartClick() {
+  location.reload(true);
 }
