@@ -7,6 +7,7 @@ let charName;
 let enemyhp;
 let enemyAttack;
 let enemyName;
+let enemyDefeatedCount = 0;
 
 $(document).ready(function() {
 
@@ -82,7 +83,13 @@ function handleAttackBtnClick() {
     enemySet = false;
     $('.current-enemy').detach();
     $('#attack-output').html(`<div class="col-4">You have defeated ${enemyName}. You can choose another enemy to fight.</div>`);
-  } 
+    enemyDefeatedCount++;
+  }
+  if (enemyDefeatedCount === 3) {
+    $('#attack-output').html(`<div class="col-4">You Won!!! GAME OVER!!!</div><div class="col-8"></div>
+      <div class="col-4"><button id="restart">Restart</button></div>`);
+    $(document).off('click', '#attack', handleAttackBtnClick);
+  }
   
 }
 
