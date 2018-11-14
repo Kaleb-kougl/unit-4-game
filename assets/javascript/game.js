@@ -63,5 +63,10 @@ function handleAttackBtnClick() {
     $('#attack-output').html(`<div class="col-12">You attacked ${enemyName} for 
     ${currentAttack} damage.<br>${enemyName} attacked you back for ${enemyAttack} damage.</div>`);
     currentAttack += baseCharAttack;
+  } else if (enemyhp <= 0) {
+    enemySet = false;
+    $('.current-enemy').detach();
+  } else if (charhp <= 0) {
+    console.log('you suck');
   }
 }
