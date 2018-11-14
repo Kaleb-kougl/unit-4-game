@@ -4,8 +4,12 @@ body {
 
 img {
   width: inherit;
-  max-height: 120;
+  max-height: 100px;
   margin: 5px;
+}
+
+.image-row {
+  height: 140px;
 }
 
 .char {
